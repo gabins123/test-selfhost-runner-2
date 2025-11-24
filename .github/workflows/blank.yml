@@ -16,10 +16,9 @@ jobs:
 
     steps:
     - name: start
-      run: echo start 2
-    - name: Sleep for 5 min
-      uses: jakejarvis/wait-action@master
-      with:
-        time: '5m'
+      run: echo start 1
+    - name: Sleep for 1 min
+      run: timeout /t 60
+      shell: cmd
     - name: end
-      run: echo end 2
+      run: echo start 1
