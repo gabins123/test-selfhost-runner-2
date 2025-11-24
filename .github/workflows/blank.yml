@@ -17,9 +17,8 @@ jobs:
     steps:
     - name: start
       run: echo start 1
-    - name: Sleep for 1 min
-      uses: jakejarvis/wait-action@master
-      with:
-        time: '1m'
+    - name: Sleep for 60 seconds
+      run: Start-Sleep -s 60
+      shell: powershell
     - name: end
       run: echo start 1
