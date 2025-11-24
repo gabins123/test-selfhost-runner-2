@@ -15,7 +15,11 @@ jobs:
     runs-on: self-hosted
 
     steps:
+    - name: start
+      run: echo start 2
     - name: Sleep for 5 min
       uses: jakejarvis/wait-action@master
       with:
         time: '5m'
+    - name: end
+      run: echo end 2
