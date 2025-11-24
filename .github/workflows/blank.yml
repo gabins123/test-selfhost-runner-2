@@ -18,7 +18,8 @@ jobs:
     - name: start
       run: echo start 1
     - name: Sleep for 1 min
-      run: timeout /t 60
-      shell: cmd
+      uses: jakejarvis/wait-action@master
+      with:
+        time: '1m'
     - name: end
       run: echo start 1
